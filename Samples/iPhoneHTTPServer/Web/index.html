@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8" /> 
+<title>系统简介</title> 
+<link rel="stylesheet" type="text/css" href="css/nav.css">
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+<script type="text/javascript" src="js/client.js"></script>
+
+</head> 
+<body> 
+
+    <script type="text/javascript">
+        function getNoParameter(){
+            client.get({url:'http://localhost:8080/ipa/list_json'},function(err,result){
+                if (!err) {
+                    for(var b in result){
+                        alert(">> "+result[b].ipaBundleId+" ipaOrApk:"+result[b].ipaOrApk);
+                    }
+                }
+                else {
+                    alert("请求失败："+err.message);
+                }
+            });
+        }
+        function getWithParameter(){
+            var d = {'ipaBundleId':'com.anody.easyhome','ipaOrApk':1};
+            client.get({url:'http://localhost:8080/ipa/app_json',data:d},function(err,result){
+                if (!err) {
+                     alert(">> "+result.datas.ipaDisplayName);
+                }
+                else {
+                    alert("请求失败："+err.message);
+                }
+            });
+        }
+        function postClick(){
+            var d = {'ipaBundleId':'com.soffice.TronkerEnterprise','ipaOrApk':0};
+            client.post({url:'http://localhost:8080/ipa/delete_json',data:d},function(err,result){
+                if (!err) {
+                    alert(">> "+result.message);
+                }
+                else {
+                    alert("请求失败："+err.message);
+                }
+            });
+        }
+    </script>
+
+<ul id="nav"> 
+<li><a href="javascript:void(0)" onclick="getNoParameter()">GET无参数</a></li> 
+<li><a href="javascript:void(0)" onclick="postClick()">POST请求</a></li> 
+<li><a href="javascript:void(0)" onclick="getWithParameter()">GET有参数</a></li> 
+<li><a href="example.html">CSS开发工具</a></li>
+<li><a href="http://www.divcss5.com/css-texiao/">CSS特效</a></li> 
+<li><a href="http://www.divcss5.com/wenji/">CSS问题</a></li> 
+</ul> 
+</body> 
+</html> 
+
