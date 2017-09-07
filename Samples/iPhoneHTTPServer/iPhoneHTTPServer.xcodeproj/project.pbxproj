@@ -19,6 +19,7 @@
 		9A868FA31F6132EA0093CC51 /* SFAppStatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A868F9F1F6132EA0093CC51 /* SFAppStatusModel.m */; };
 		9A868FA51F61333E0093CC51 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A868FA41F61333E0093CC51 /* CoreAudio.framework */; };
 		9A868FA71F6133720093CC51 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A868FA61F6133720093CC51 /* AVFoundation.framework */; };
+		9A868FB61F613EC90093CC51 /* MyHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A868FB51F613EC90093CC51 /* MyHTTPConnection.m */; };
 		DC372EFE139DC2E600A8407D /* DDData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC372EE2139DC2E600A8407D /* DDData.m */; };
 		DC372EFF139DC2E600A8407D /* DDNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = DC372EE4139DC2E600A8407D /* DDNumber.m */; };
 		DC372F00139DC2E600A8407D /* DDRange.m in Sources */ = {isa = PBXBuildFile; fileRef = DC372EE6139DC2E600A8407D /* DDRange.m */; };
@@ -68,6 +69,8 @@
 		9A868F9F1F6132EA0093CC51 /* SFAppStatusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAppStatusModel.m; sourceTree = "<group>"; };
 		9A868FA41F61333E0093CC51 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		9A868FA61F6133720093CC51 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9A868FB41F613EC90093CC51 /* MyHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHTTPConnection.h; sourceTree = "<group>"; };
+		9A868FB51F613EC90093CC51 /* MyHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHTTPConnection.m; sourceTree = "<group>"; };
 		DC372E48139D398400A8407D /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 		DC372E49139D398400A8407D /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		DC372E4B139D398400A8407D /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 			children = (
 				1D3623240D0F684500981E51 /* AppDelegate.h */,
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
+				9A868FB41F613EC90093CC51 /* MyHTTPConnection.h */,
+				9A868FB51F613EC90093CC51 /* MyHTTPConnection.m */,
 				28D7ACF60DDB3853001CB0EB /* iPhoneHTTPServerViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* iPhoneHTTPServerViewController.m */,
 			);
@@ -359,7 +364,7 @@
 						DevelopmentTeam = JPYH2GZ99G;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -418,6 +423,7 @@
 				DC372F05139DC2E600A8407D /* HTTPAsyncFileResponse.m in Sources */,
 				DC372F06139DC2E600A8407D /* HTTPDataResponse.m in Sources */,
 				DC372F07139DC2E600A8407D /* HTTPDynamicFileResponse.m in Sources */,
+				9A868FB61F613EC90093CC51 /* MyHTTPConnection.m in Sources */,
 				DC372F08139DC2E600A8407D /* HTTPFileResponse.m in Sources */,
 				DC372F09139DC2E600A8407D /* HTTPRedirectResponse.m in Sources */,
 				DC372F0A139DC2E600A8407D /* WebSocket.m in Sources */,
